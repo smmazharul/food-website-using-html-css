@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+:root{
+    --primary-color: #f1c40f;
+    --secBg-color: #dfe6e9;
+    --font: 'Poppins', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+body{
+    background: #F7F7F7;
+}
+.btn{
+    padding: .6rem 1.5rem;
+    text-decoration: none;
+    color: #000;
+    font-family: var(--font);
+    border: 1.8px solid var(--primary-color);
+    outline: none;
+    transition: .3s;
+}
+.btn-primary{
+    background: var(--primary-color);
+}
+.btn-primary:hover{
+    background: transparent;
+}
+.btn-transparent{
+    background: transparent;
+}
+.btn-transparent:hover{
+    background: var(--primary-color);
+}
+.sectitle{
+    margin: 3rem 0;
+    text-align: center;
+}
+header{
+    height: 100vh;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    height: 120px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar a{
+    text-decoration: none;
+    color: #000;
+    margin: 0 1.5rem;
+    transition: .3s;
+    position: relative;
+    padding-bottom: 2px;
+}
+.navbar a:hover{
+    color: var(--primary-color);
+}
+.navbar a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background-color: var(--primary-color);
+    opacity: 0;
+    width: 5%;
+    transition: .3s;
+}
+.navbar a:hover::after{
+    opacity: 1;
+    width: 100%;
+}
+.navbar a li{
+    list-style: none;
+}
+.nav-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-icon li{
+    list-style: none;
+    margin: 0 1rem;
+    cursor: pointer;
+}
+.nav-icon li sup{
+    margin-left: 5px;
+    padding: 1px 6px;
+    background-color: red;
+    color: #fff;
+}
+.nav-icon .searchBTN{
+    background: var(--primary-color);
+    color: #000;
+    padding: .3rem .5rem;
+    border-radius: 5px;
+}
+.header-banner{
+    margin: 0 auto;
+    position: relative;
+    width: 85%;
+    top: 15%;
+    display: flex;
+    justify-content: center;
+}
+.header-banner .intro{
+    width: 35%;
+    height: 100%;
+    transform: translateY(6rem);
+}
+.header-banner .intro h1{
+    font-size: 50px;
+    line-height: 55px;
+}
+.header-banner .intro h1 span{
+    color: var(--primary-color);
+}
+.header-banner .intro p{
+    width: 100%;
+    letter-spacing: 1px;
+    font-size: 16px;
+    margin: 1.5rem 0;
+    text-align: justify;
+}
+.socialIcon{
+    position: fixed;
+    top: 30%;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 99999;
+}
+.socialIcon a{
+    padding: .8rem 1rem;
+    background: var(--primary-color);
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: 1rem;
+    text-align: center;
+    border: 1.5px solid var(--primary-color);
+    transition: .3s;
+}
+.socialIcon a:hover{
+    background: transparent;
+}
+/* header end */
+
+/* product entro start */
+.prodIntro{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    background: var(--secBg-color);
+    padding: 5rem 0;
+}
+.pattern::before{
+    content: "";
+    position: absolute;
+    top: -4rem;
+    left: 0;
+    width: 330px;
+    height: 260px;
+    background: url(img/pattern.png);
+    z-index: 1;
+}
+.prodIntro .card{
+    width: 450px;
+    height: 400px;
+}
+.prodIntro .card:first-child{
+    z-index: 1;
+}
+.prodIntro .card:last-child{
+    width: 600px;
+}
+.prodIntro .card:last-child p{
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+.prodIntro .card img{
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+/* product entro end */
+.gridSec{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+.gridSec .prodGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    justify-items: center;
+    width: 75%;
+}
+.gridSec .prodGrid .prodCard{
+    width: 350px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.gridSec .prodGrid .prodCard img{
+    width: 100%;
+    height: 60%;
+}
+.gridSec .prodGrid .prodCard  p{
+    margin-bottom: 1rem;
+}
+
+
+.postGrid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1rem;
+    justify-content: center;
+    width: 75%;
+}
+.postGrid .postCard{
+    width: 400px;
+    height: 520px;
+    box-shadow: 0 0 5px #95a5a6;
+}
+.postGrid .postCard img{
+width: 100%;
+height: 60%;
+}
+.postGrid .postCard .postIntro{
+    padding: 1rem;
+}
+.postGrid .postCard .postIntro h2{
+    text-align: justify;
+}
+.postGrid .postCard .postIntro p{
+    margin: 1rem 0;
+    text-align: justify;
+    font-size: 16px;
+}
+.getTouch{
+    height: 200px;
+    background: var(--primary-color);
+    width: 75%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 5rem;
+    border-radius: 20px;
+    padding: 0 6rem;
+}
+.getTouch div{
+    width: 45%;
+    margin: 0 1rem;
+}
+.getTouch div h1{
+    color: #fff;
+    font-size: 50px;
+    line-height: 55px;
+}
+.getTouch div form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.getTouch div form input{
+    width: 100%;
+    padding: .8rem 10px;
+    outline: none;
+    border: 1px solid transparent;
+    font-size:16px ;
+    font-family: var(--font);
+}
+.getTouch div form input,button{
+    display: block;
+    margin: .5rem 0;
+}
+.getTouch div form button{
+    cursor: pointer;
+    font-family: var(--font);
+}
+footer{
+    margin-top: 3rem;
+    background: var(--secBg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    
+}
+footer ul{
+    display: flex;
+    margin: 2rem 0;
+}
+footer ul a{
+    color: #000;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+footer ul a li{
+    list-style: none;
+}
+footer ul a:hover{
+    color: var(--primary-color);
+}
